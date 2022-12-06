@@ -1,0 +1,19 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "json.schemas": [
+    {
+      "fileMatch": ["/*electron-builder.json5"],
+      "url": "https://json.schemastore.org/electron-builder"
+    }
+  ],
+  "files.exclude": {
+    "**/dist": true,
+    "**/dist-electron": true,
+    "**/release": true,
+    "**/package-lock.json": true
+  },
+  "cSpell.words": [
+    "unocss"
+  ]
+}
