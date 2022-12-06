@@ -9,13 +9,16 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build && electron-builder",
-    "reinstall": "rimraf node_modules && rimraf package-lock.json && rimraf yarn.lock && yarn install"
+    "reinstall": "rimraf node_modules && rimraf package-lock.json && rimraf yarn.lock && yarn install",
+    "prepare": "husky install",
+    "lint": "lint-staged -c lint-stagedrc.js",
+    "commit": "czg"
   },
   "engines": {
     "node": "^14.18.0 || >=16.0.0"
   },
-  "dependencies": {},
   "devDependencies": {
+    "@commitlint/config-conventional": "^17.3.0",
     "@typescript-eslint/eslint-plugin": "^5.45.1",
     "@typescript-eslint/parser": "^5.45.1",
     "@unocss/preset-uno": "^0.47.5",
@@ -23,6 +26,7 @@
     "@unocss/vite": "^0.47.5",
     "@vitejs/plugin-vue": "^3.1.2",
     "@vitejs/plugin-vue-jsx": "^2.1.1",
+    "czg": "^1.4.0",
     "electron": "^22.0.0",
     "electron-builder": "^23.3.3",
     "electron-devtools-installer": "^3.2.0",
@@ -31,6 +35,8 @@
     "eslint-define-config": "^1.12.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.8.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.1.0",
     "prettier": "^2.8.0",
     "rimraf": "^3.0.2",
     "stylelint": "^14.16.0",
