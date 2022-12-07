@@ -3,7 +3,6 @@ import transformerDirective from '@unocss/transformer-directives';
 
 export function configUnocssPlugin() {
   const plugin = unocss({
-    // presets: [presetAttributify(), presetUno(), presetMini()],
     theme: {
       breakpoints: {
         sm: '576px',
